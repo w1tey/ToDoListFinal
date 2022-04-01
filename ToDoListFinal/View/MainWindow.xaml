@@ -37,7 +37,8 @@
             </Grid>
         </Grid>
 
-        <ListBox Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=1}">
+        <ListBox Grid.Row="1" ItemsSource="{Binding TaskList}"
+                 SelectedItem="{Binding SelectedTask}" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <DockPanel>

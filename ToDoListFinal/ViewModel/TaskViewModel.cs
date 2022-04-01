@@ -55,15 +55,8 @@ namespace ToDoListFinal.ViewModel
             get => _deleteTaskCommand ??= new RelayCommand(
                 () =>
                 {
-                    if (SelectedTask != null)
-                    {
-                        TaskList.Remove(SelectedTask);
-                        TaskList = new(TaskList);
-                    }
-                    else
-                    {
-                        MessageBox.Show("You didn't select a task", "Error");
-                    }
+                   TaskList.Remove(SelectedTask);
+                   TaskList = new(TaskList);
                 });
         }
 
